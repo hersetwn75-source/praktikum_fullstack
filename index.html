@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Otaku Sejati</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <button class="menu-toggle" aria-label="Toggle Menu"><i class="fas fa-bars"></i></button>
+        <h1 class="header-title">DASHBOARD OTAKU SEJATI</h1>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <button class="btn-close" aria-label="Close Menu"><i class="fas fa-times"></i></button>
+        <div class="sidebar-brand">
+            <i class="fas fa-dragon"></i>
+            <span>Menu Navigasi</span>
+        </div>
+        <ul>
+            <li><a href="#" class="active"><i class="fas fa-home"></i> Dashboard</a></li>
+            <li><a href="#section-form"><i class="fas fa-user-plus"></i> Tambah Data</a></li>
+            <li><a href="#section-table"><i class="fas fa-table"></i> Lihat Data</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+        
+        <!-- Form Section -->
+        <section class="section-form glass-panel" id="section-form">
+            <h2 class="section-title"><i class="fas fa-database"></i> Kelola Data Resonator</h2>
+            <form id="formMahasiswa">
+                <input type="hidden" id="editId">
+                <div class="form-group">
+                    <label for="nama"><i class="fas fa-user"></i> Nama Resonator</label>
+                    <input type="text" id="nama" placeholder="Masukkan nama..." required>
+                </div>
+                <div class="form-group">
+                    <label for="nim"><i class="fas fa-id-card"></i> NIM (ID Resonator)</label>
+                    <input type="text" id="nim" placeholder="Masukkan NIM (Angka saja)..." required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="submitBtn" class="btn-primary"><i class="fas fa-save"></i> Simpan Data</button>
+                    <button type="button" id="cancelEdit" class="btn-secondary" style="display: none;"><i class="fas fa-times"></i> Batal</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Table Section -->
+        <section class="section-table glass-panel" id="section-table">
+            <h2 class="section-title"><i class="fas fa-list-ul"></i> Daftar Resonator Aktif</h2>
+            <div class="table-wrapper">
+                <table id="tabelMahasiswa">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>NIM</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data akan di-render oleh JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
